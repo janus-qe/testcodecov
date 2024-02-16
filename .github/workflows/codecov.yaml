@@ -40,10 +40,15 @@ jobs:
   codecov:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
-      - name: Run tests and generate coverage report
-        run: |
-          # Replace this with the command to run your tests and generate coverage report
+      - name: Set up Node 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm install
+      - name: Run tests and collect coverage
+        run: npm run test
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
