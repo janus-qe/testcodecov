@@ -1,0 +1,14 @@
+{
+    "name": "@janus-qe/testcodecov",
+    "version": "0.0.1",
+    "description": "Codecov Example Javascript",
+    "scripts": {
+      "test": "vitest run --coverage"
+    },
+    "dependencies": {
+      "vitest": "^1.2.2"
+    },
+    "devDependencies": {
+      "@vitest/coverage-v8": "^1.2.2"
+    }
+  }
